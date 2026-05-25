@@ -1,4 +1,3 @@
-import React from "react";
 import { Github, ExternalLink, Palette } from "lucide-react";
 
 export default function Projects() {
@@ -57,9 +56,9 @@ export default function Projects() {
 
       {/* Project Cards */}
       <div className="relative z-10 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-        {projects.map((project, index) => (
+        {projects.map((project) => (
           <div
-            key={index}
+            key={project.title}
             className="group rounded-[30px] bg-white/70 p-7 shadow-xl backdrop-blur-md transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl"
           >
             {/* Decorative Splash */}
@@ -75,9 +74,9 @@ export default function Projects() {
 
             {/* Tags */}
             <div className="mb-6 flex flex-wrap gap-2">
-              {project.tags.map((tag, i) => (
+              {project.tags.map((tag) => (
                 <span
-                  key={i}
+                  key={tag}
                   className="rounded-full bg-pink-100 px-4 py-1 text-sm text-gray-700"
                 >
                   {tag}
@@ -91,6 +90,7 @@ export default function Projects() {
                 href={project.codeUrl}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label={`View ${project.title} code (opens in new tab)`}
                 className="flex items-center gap-2 rounded-full bg-pink-200 px-4 py-2 text-gray-800 transition hover:bg-pink-300"
               >
                 <Github size={18} />
@@ -101,6 +101,7 @@ export default function Projects() {
                 href={project.liveUrl}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label={`View ${project.title} live demo (opens in new tab)`}
                 className="flex items-center gap-2 rounded-full bg-blue-200 px-4 py-2 text-gray-800 transition hover:bg-blue-300"
               >
                 <ExternalLink size={18} />
