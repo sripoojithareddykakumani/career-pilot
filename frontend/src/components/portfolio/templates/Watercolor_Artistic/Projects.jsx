@@ -8,18 +8,24 @@ export default function Projects() {
       description:
         "A vibrant portfolio concept inspired by watercolor splashes and artistic creativity.",
       tags: ["React", "Tailwind", "Creative UI"],
+      codeUrl: "#",
+      liveUrl: "#",
     },
     {
       title: "Canvas Dreams",
       description:
         "A modern interface with fluid layouts, soft gradients, and expressive visual elements.",
       tags: ["Frontend", "Responsive", "Design"],
+      codeUrl: "#",
+      liveUrl: "#",
     },
     {
       title: "Pastel Motion",
       description:
         "An artistic experience combining smooth interactions with watercolor-inspired visuals.",
       tags: ["Animation", "UI/UX", "Modern"],
+      codeUrl: "#",
+      liveUrl: "#",
     },
   ];
 
@@ -79,17 +85,27 @@ export default function Projects() {
               ))}
             </div>
 
-            {/* Buttons */}
+            {/* Action Buttons */}
             <div className="flex items-center gap-4">
-              <button className="flex items-center gap-2 rounded-full bg-pink-200 px-4 py-2 text-gray-800 transition hover:bg-pink-300">
+              <a
+                href={project.codeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 rounded-full bg-pink-200 px-4 py-2 text-gray-800 transition hover:bg-pink-300"
+              >
                 <Github size={18} />
                 Code
-              </button>
+              </a>
 
-              <button className="flex items-center gap-2 rounded-full bg-blue-200 px-4 py-2 text-gray-800 transition hover:bg-blue-300">
+              <a
+                href={project.liveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 rounded-full bg-blue-200 px-4 py-2 text-gray-800 transition hover:bg-blue-300"
+              >
                 <ExternalLink size={18} />
                 Live
-              </button>
+              </a>
             </div>
           </div>
         ))}
