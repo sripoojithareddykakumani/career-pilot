@@ -1,4 +1,4 @@
-import { Github, ExternalLink, Palette } from "lucide-react";
+import { GitHub, ExternalLink, Palette } from "lucide-react";
 
 export default function Projects() {
   const projects = [
