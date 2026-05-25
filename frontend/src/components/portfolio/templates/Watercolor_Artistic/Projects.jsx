@@ -93,7 +93,7 @@ export default function Projects() {
                 aria-label={`View ${project.title} code (opens in new tab)`}
                 className="flex items-center gap-2 rounded-full bg-pink-200 px-4 py-2 text-gray-800 transition hover:bg-pink-300"
               >
-                <Github size={18} />
+                <GitHub size={18} />
                 Code
               </a>
 
